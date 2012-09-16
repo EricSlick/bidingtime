@@ -13,11 +13,11 @@
 # gem 'pg'
 #
 development:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: bidingtime_development
   pool: 5
-  username: bidingtime
+  username:
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
