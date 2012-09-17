@@ -10,3 +10,9 @@
     </li>
   </ul>
 </div>
+
+<% Dir.glob("app/assets/images/*").each do |image| %>
+  <div>
+    <%= image_tag image.gsub("app/assets/images/", ""), {:class => "imageList"} %>
+  </div>
+<% end %>
