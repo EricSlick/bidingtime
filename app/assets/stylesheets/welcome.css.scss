@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+@import url(http://fonts.googleapis.com/css?family=Londrina+Outline);
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
 #mainPageHeader {
   height: 200px;
   width:100%;
@@ -10,8 +13,22 @@
   padding: 20px;
 }
 
-#mainPageHeader h1 {
-  font-size: 5em;
+#mainPageHeader h1.pink {
+  font-size: 12em;
+  font-family: 'Londrina Outline', cursive;
+  font-family: 'Varela Round', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+#mainPageHeader h1.blue {
+  font-size: 12em;
+  font-family: 'Londrina Outline', cursive;
+  font-family: 'Varela Round', sans-serif;
+  text-transform: uppercase;
+  color: rgba(1, 6, 163, 0.48);
+  text-shadow: 0 0 10px #6ae9ff, 0 0 20px #6ae9ff, 0 0 30px #fff, 0 0 40px rgba(17, 123, 255, 0.23), 0 0 70px rgba(17, 123, 255, 0.34), 0 0 80px rgba(17, 123, 255, 0.34), 0 0 100px rgba(17, 123, 255, 0.34), 0 0 150px rgba(17, 123, 255, 0.34);
 }
 
 #topNavbar {
@@ -34,7 +51,7 @@
   position: relative;
   text-decoration: none;
   text-align: center;
-  font-family: Arial;
+  font-family: trebuchet ms;
   font-size: 20px;
   text-transform: uppercase;
   color: white;
@@ -49,16 +66,6 @@
   text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #cb0000, 0 0 7px #cb0000, 0 0 8px #cb0000, 0 0 10px #cb0000, 0 0 15px #cb0000;
 }
 
-#topNavbar.neon a {
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  font-family: fantasy;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: white;
-  text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;
-}
 
 #leftNavBars {
   background-color: black;
