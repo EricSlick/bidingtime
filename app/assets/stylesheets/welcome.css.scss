@@ -27,9 +27,19 @@
   font-family: 'Londrina Outline', cursive;
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
+  color: rgba(17, 80, 255, 0.36);
+  text-shadow: 0 0 10px #fff, 0 0 20px #1102ff, 0 0 30px #fff, 0 0 40px #117bff, 0 0 70px #1e24ff, 0 0 80px #117bff, 0 0 100px #117bff, 0 0 150px #117bff;
+}
+
+#mainPageHeader h1.blue2 {
+  font-size: 12em;
+  font-family: 'Londrina Outline', cursive;
+  font-family: 'Varela Round', sans-serif;
+  text-transform: uppercase;
   color: rgba(1, 6, 163, 0.48);
   text-shadow: 0 0 10px #6ae9ff, 0 0 20px #6ae9ff, 0 0 30px #fff, 0 0 40px rgba(17, 123, 255, 0.23), 0 0 70px rgba(17, 123, 255, 0.34), 0 0 80px rgba(17, 123, 255, 0.34), 0 0 100px rgba(17, 123, 255, 0.34), 0 0 150px rgba(17, 123, 255, 0.34);
 }
+
 
 #topNavbar {
   background-color: black;
