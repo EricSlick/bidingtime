@@ -6,11 +6,23 @@
 @import url(http://fonts.googleapis.com/css?family=Londrina+Outline);
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
+body {
+  width:1024px;
+  margin: auto;
+  padding-top: 10px;
+  background-color: #D7DCBD;
+  color: #7E9916;
+  color: #ACBD4F;
+  color: #B7C181;
+  color: #D7DCBD;
+  color: #EDEFE2;
+  background-image: url("grundgebackgroundmossygreenthick.jpg");
+}
+
 #mainPageHeader {
-  height: 200px;
-  width:100%;
+  height: 300px;
   background-image: url("vintage_29.jpg");
-  padding: 20px;
+  background-image: url("grundgebackgroundmossygreenthick.jpg");
 }
 
 #mainPageHeader h1.pink {
@@ -23,7 +35,9 @@
 }
 
 #mainPageHeader h1.blue {
-  font-size: 12em;
+  margin: 0;
+  padding: 80px 0 0 20px;
+  font-size: 11em;
   font-family: 'Londrina Outline', cursive;
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
@@ -32,7 +46,7 @@
 }
 
 #mainPageHeader h1.blue2 {
-  font-size: 12em;
+  font-size: 11em;
   font-family: 'Londrina Outline', cursive;
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
@@ -52,9 +66,8 @@
 }
 
 #topNavbar li {
-  margin: 10px 0 0 0;
+  margin: 10px 20px 0 0;
   display: inline-block;
-  padding-right: 10px;
 }
 
 #topNavbar.neon a {
@@ -77,35 +90,35 @@
 }
 
 
-#leftNavBars {
-  background-color: black;
-  width: 200px;
-  height: 1000px;
-  float:left;
+.leftNavBar {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 
-#leftNavBars ul {
+.leftNavBar ul {
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
-#leftNavBars li {
+.leftNavBar li {
   margin: 10px 0 0 0;
-  padding-right: 10px;
 }
 
-#leftNavBars.neon a:hover {
+.leftNavBar.neon a:hover {
   text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px #FF00DE, 0 0 2px #FF00DE, 0 0 3px #FF00DE, 0 0 4px #FF00DE, 0 0 5px #FF00DE;
 }
 
-#leftNavBars.neon a:active {
+.leftNavBar.neon a:active {
   text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #cb0000, 0 0 7px #cb0000, 0 0 8px #cb0000, 0 0 10px #cb0000, 0 0 15px #cb0000;
 }
 
-#leftNavBars.neon a {
-  position: relative;
+.leftNavBar.neon a {
   text-decoration: none;
-  text-align: left;
   font-family: "Andale Mono";
   font-size: 15px;
   text-transform: uppercase;
@@ -117,3 +130,17 @@
   max-width: 640px;
 }
 
+#leftColumn {
+  background-color: #adadad;
+  width: 150px;
+  height: 100%;
+  float:left;
+}
+
+#mainArticlesSection {
+  margin-left: 151px;
+}
+
+.flash.alert {
+  color: red;
+}

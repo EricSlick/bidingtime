@@ -1,5 +1,9 @@
 Bidingtime::Application.routes.draw do
 
+  resources :users
+  match "/logout", :to => "sessions#logout", :as => :logout
+  resources :sessions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
