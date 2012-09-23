@@ -73,10 +73,13 @@ body {
   text-decoration: none;
   text-align: center;
   font-family: trebuchet ms;
+  font-family: 'Varela Round', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   color: white;
   text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;
+  text-shadow: 0 0 1px #6ae9ff, 0 0 2px #6ae9ff, 0 0 3px #fff, 0 0 4px rgba(17, 123, 255, 0.23), 0 0 7px rgba(17, 123, 255, 0.34), 0 0 8px rgba(17, 123, 255, 0.34), 0 0 10px rgba(17, 123, 255, 0.34), 0 0 15px rgba(17, 123, 255, 0.34);
+  text-shadow: 0 0 1px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #117bff, 0 0 7px #1e24ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;
 }
 
 #topNavbar.neon a:hover {
@@ -108,6 +111,8 @@ body {
 
 .leftNavBar.neon a:hover {
   text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px #FF00DE, 0 0 2px #FF00DE, 0 0 3px #FF00DE, 0 0 4px #FF00DE, 0 0 5px #FF00DE;
+  text-shadow: 0 0 1px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #117bff, 0 0 7px #1e24ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .leftNavBar.neon a:active {
@@ -117,10 +122,12 @@ body {
 .leftNavBar.neon a {
   text-decoration: none;
   font-family: "Andale Mono";
-  font-size: 15px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 12px;
   text-transform: uppercase;
   color: white;
   text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;
+  text-shadow: 0 0 1px #fff, 0 0 1px #1102ff, 0 0 1px #fff, 0 0 1px #117bff, 0 0 2px #1e24ff, 0 0 3px #117bff, 0 0 4px #117bff, 0 0 5px #117bff;
 }
 
 .imageList {
@@ -153,12 +160,22 @@ body {
 }
 
 .blog h1 {
-   color: red;
+  color: red;
 }
 
 .blog .blogBody {
-   background-color: tan;
+  background-color: tan;
   padding: 10px;
   width: 800px;
 }
 
+.admin {
+   color: white;
+}
+
+.admin .adminLinks {
+}
+
+.admin a {
+  color: white;
+}

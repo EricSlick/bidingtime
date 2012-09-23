@@ -1,5 +1,5 @@
 <div class="blog">
-  <% @blogs.each do |blog| %>
+  <% @articles.each do |blog| %>
     <h1><%= blog.title %></h1>
     <div>
       <%= image_tag image_path(blog.image_url), :class => "blogImage" %>"
@@ -7,9 +7,3 @@
     <div class="blogBody"><%= blog.body %></div>
   <% end %>
 </div>
-
-<% Dir.glob("app/assets/images/*").each do |image| %>
-  <div>
-    <%= image_tag image.gsub("app/assets/images/", ""), {:class => "imageList"} %>
-  </div>
-<% end %>

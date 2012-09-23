@@ -18,18 +18,18 @@
       <a href="">About</a>
     </li>
     <li>
-      <a class="active" href="">Blogs</a>
+      <%= link_to "Blogs", root_url(:blogs => "view"), :class => "active" %>
     </li>
     <li>
-      <a href="">Interviews</a>
+      <%= link_to "Interviews", root_url(:interviews => "view"), :class => "active" %>
     </li>
     <li>
       <a href="">Contact</a>
     </li>
     <li>
-      <%= link_to("Login", {:controller => "sessions", :action => "new"} ) unless current_user %>
-      <%= link_to("or Create Account", {:controller => "users", :action => "new"} ) unless current_user %>
-      <%= link_to("Logout", logout_path ) unless current_user.nil? %>
+      <%= link_to("Login", {:controller => "sessions", :action => "new"}) unless current_user %>
+      <%= link_to("or Create Account", {:controller => "users", :action => "new"}) unless current_user %>
+      <%= link_to("Logout", logout_path) unless current_user.nil? %>
     </li>
   </ul>
 </div>
@@ -61,10 +61,19 @@
   <div class="leftNavBar neon">
     <ul>
       <li>
-        <a href="">Article Archives</a>
+        <a href="">Interview Archives</a>
       </li>
     </ul>
   </div>
+  <% if can? :manage,  :all %>
+    <div class="leftNavBar neon">
+      <ul>
+        <li>
+          <%= link_to("Admin", admin_path) %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
 </div>
 <div id="mainArticlesSection">
   <% flash.each do |key, value| %>

@@ -1,0 +1,17 @@
+<div class="admin">
+
+  <h1>Admin</h1>
+
+  <div class="adminLinks">
+    <%= link_to("Blogs", blogs_path, :class => "adminLink") %>
+  </div>
+  <div>
+    <%= link_to("Interviews", interviews_path, :class => "adminLink") %>
+  </div>
+</div>
+
+<% Dir.glob("app/assets/images/*").each do |image| %>
+  <div>
+    <%= image_tag image.gsub("app/assets/images/", ""), {:class => "imageList"} %>
+  </div>
+<% end %>
