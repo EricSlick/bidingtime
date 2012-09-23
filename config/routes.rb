@@ -1,5 +1,9 @@
 Bidingtime::Application.routes.draw do
 
+  resources :interviews
+
+  resources :blogs
+
   resources :users
   match "/logout", :to => "sessions#logout", :as => :logout
   resources :sessions

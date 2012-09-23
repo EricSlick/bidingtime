@@ -2,12 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 @import url(http://fonts.googleapis.com/css?family=Londrina+Outline);
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
 body {
-  width:1024px;
+  width: 1024px;
   margin: auto;
   padding-top: 10px;
   background-color: #D7DCBD;
@@ -54,7 +53,6 @@ body {
   text-shadow: 0 0 10px #6ae9ff, 0 0 20px #6ae9ff, 0 0 30px #fff, 0 0 40px rgba(17, 123, 255, 0.23), 0 0 70px rgba(17, 123, 255, 0.34), 0 0 80px rgba(17, 123, 255, 0.34), 0 0 100px rgba(17, 123, 255, 0.34), 0 0 150px rgba(17, 123, 255, 0.34);
 }
 
-
 #topNavbar {
   background-color: black;
   height: 40px;
@@ -88,7 +86,6 @@ body {
 #topNavbar.neon a:active {
   text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #cb0000, 0 0 7px #cb0000, 0 0 8px #cb0000, 0 0 10px #cb0000, 0 0 15px #cb0000;
 }
-
 
 .leftNavBar {
   border: 1px solid black;
@@ -126,7 +123,7 @@ body {
   text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;
 }
 
-.imageList{
+.imageList {
   max-width: 640px;
 }
 
@@ -134,7 +131,7 @@ body {
   background-color: #adadad;
   width: 150px;
   height: 100%;
-  float:left;
+  float: left;
 }
 
 #mainArticlesSection {
@@ -144,3 +141,24 @@ body {
 .flash.alert {
   color: red;
 }
+
+.blog {
+
+  margin: 20px;
+}
+
+.blog .blogImage {
+  width: 100px;
+  height: 100px;
+}
+
+.blog h1 {
+   color: red;
+}
+
+.blog .blogBody {
+   background-color: tan;
+  padding: 10px;
+  width: 800px;
+}
+
