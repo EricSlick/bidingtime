@@ -1,9 +1,5 @@
 <div class="blog">
   <% @articles.each do |blog| %>
-    <h1><%= blog.title %></h1>
-    <div>
-      <%= image_tag image_path(blog.image_url), :class => "blogImage" %>"
-    </div>
-    <div class="blogBody"><%= blog.body %></div>
+    <%=  render :partial => "welcome/show", :locals => {:blog => blog} %>
   <% end %>
 </div>

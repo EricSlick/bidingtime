@@ -1,6 +1,7 @@
-class InterviewsController < ApplicationController
+class InterviewsController < AdminController
   # GET /interviews
   # GET /interviews.json
+
   def index
     @interviews = Interview.all
 
@@ -14,6 +15,7 @@ class InterviewsController < ApplicationController
   # GET /interviews/1.json
   def show
     @interview = Interview.find(params[:id])
+    @articles = [@interview]
 
     respond_to do |format|
       format.html # show.html.erb

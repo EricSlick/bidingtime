@@ -1,4 +1,4 @@
-class BlogsController < ApplicationController
+class BlogsController < AdminController
   # GET /blogs
   # GET /blogs.json
   def index
@@ -14,6 +14,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @blog = Blog.find(params[:id])
+    @articles = [@blog]
 
     respond_to do |format|
       format.html # show.html.erb

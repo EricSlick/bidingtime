@@ -1,20 +1,8 @@
-<p id="notice"><%= notice %></p>
+<%= render :template => 'welcome/index' %>
 
-<p>
-  <b>Title:</b>
-  <%= @interview.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @interview.body %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @interview.image_url %>
-</p>
+<div style="background-color: white;">
+  <%= link_to 'Edit', edit_interview_path(@interview) %> |
+  <%= link_to 'Back', interviews_path %>
+</div>
 
 
-<%= link_to 'Edit', edit_interview_path(@interview) %> |
-<%= link_to 'Back', interviews_path %>

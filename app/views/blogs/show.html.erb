@@ -1,20 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%= render :template => 'welcome/index' %>
 
-<p>
-  <b>Title:</b>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @blog.body %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @blog.image_url %>
-</p>
-
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<div style="background-color: white;">
+  <%= link_to 'Edit', edit_blog_path(@blog), :class => "admin" %> |
+  <%= link_to 'Back', blogs_path, :class => "admin" %>
+</div>
