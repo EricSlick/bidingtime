@@ -1,6 +1,8 @@
 
-<h1><%= blog.title %></h1>
-<div>
-  <%= image_tag image_path(blog.image_url), :class => "blogImage" %>"
+<h1 class="blueNeon"><%= blog.title %></h1>
+<div class="blogBody">
+  <div class="blogImage">
+    <%= image_tag image_path(blog.image_url), :class => "blogImage" %>
+  </div>
+  <%= blog.body %>
 </div>
-<div class="blogBody"><%= blog.body %></div>
