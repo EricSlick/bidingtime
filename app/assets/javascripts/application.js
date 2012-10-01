@@ -13,3 +13,36 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready()
+{
+    $('.flickerEffect').click(function(){alert("whoot");});
+    $('.flickerEffect').hover(function () {
+        alert("hover");
+        $(this).animate({
+            opacity:0.10
+        }, 1000, function () {
+// Animation complete.
+        });
+    }, function () {
+        alert("out");
+        //
+        $(this).animate({
+                opacity:1.0
+            }, 1000, function () {
+
+            }
+        );
+    });
+
+    $("li").hover(
+        function () {
+            alert("here");
+            $(this).append($("<span> ***</span>"));
+        },
+        function () {
+            alert("there");
+            $(this).find("span:last").remove();
+        }
+    );
+}
