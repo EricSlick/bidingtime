@@ -4,41 +4,45 @@
 
 @import url(http://fonts.googleapis.com/css?family=Londrina+Outline);
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@font-face {
+  font-family: 'Neon80s';
+  src: url(<%= "/assets/fonts/neon_80s/Neon.ttf" %>);
+}
 
 body {
-  width: 100%;
   margin: auto;
+  padding: 20px 20px 20px 20px;
   background-color: #eff4d3;
   color: #7E9916;
   //color: #ACBD4F;
   //color: #B7C181;
   //color: #D7DCBD;
   //color: #EDEFE2;
-  background-image: url("grundgebackgroundmossygreenthick.jpg");
-  background-image: url("tilablepattern.jpg");
-  background-image: url("tileablerust.jpg");
-  background-image: url("torn_wallpaper_by_e_dina-d346iqz.jpg");
-  background-image: url("tilablerusty.jpg");
-  background-image: url("tilablerust2.jpg");
-  background-image: url("tilableplaster.jpg");
-  background-repeat: repeat-x;
+  //background-image: url("tilableplaster.jpg");
+  background-image: url("body_background.jpg");
+  background-repeat: repeat;
   background-size: contain;
+  min-width: 930px;
 }
 
 #mainPageHeader {
-  height: 300px;
-  background-image: url("vintage_29.jpg");
-  background-image: url("main_header_image.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: black;
-  background-position: right;
+  height: 325px;
+  margin-bottom: 25px;
+  //background-color: #000000;
+}
+
+.header_image {
+  box-shadow: 0px 0px 30px #000000;
+  display: block;
+  margin: auto;
+  height: 325px;
+  width: 975px;
 }
 
 #mainPageHeader h1.pink {
   font-size: 12em;
   font-family: 'Londrina Outline', cursive;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
   color: white;
   text-transform: uppercase;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
@@ -50,7 +54,7 @@ body {
   padding: 230px 40px 0 10px;
   font-size: 6em;
   font-family: 'Londrina Outline', cursive;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
   text-transform: uppercase;
   color: rgba(17, 80, 255, 0.36);
   text-shadow: 0 0 10px #fff, 0 0 20px #1102ff, 0 0 30px #fff, 0 0 40px #117bff, 0 0 70px #1e24ff, 0 0 80px #117bff, 0 0 100px #117bff, 0 0 150px #117bff;
@@ -61,7 +65,7 @@ body {
   padding: 50px 40px 0 20px;
   font-size: 6em;
   font-family: 'Londrina Outline', cursive;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
   text-transform: uppercase;
   color: rgba(17, 80, 255, 0.36);
   text-shadow: 0 0 5px #fff, 0 0 10px #1102ff, 0 0 15px #fff, 0 0 20px #117bff, 0 0 35px #1e24ff, 0 0 80px #117bff, 0 0 50px #117bff, 0 0 75px #117bff;
@@ -72,7 +76,7 @@ body {
   padding: 50px 40px 0 20px;
   font-size: 6em;
   font-family: 'Londrina Outline', cursive;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
   text-transform: uppercase;
   color: rgba(17, 80, 255, 0.36);
   text-shadow: 0 0 10px #fff, 0 0 20px #1102ff, 0 0 30px #fff, 0 0 40px #117bff, 0 0 70px #1e24ff, 0 0 80px #117bff, 0 0 100px #117bff, 0 0 150px #117bff;
@@ -81,7 +85,7 @@ body {
 #mainPageHeader h1.blue2 {
   font-size: 11em;
   font-family: 'Londrina Outline', cursive;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
   text-transform: uppercase;
   color: rgba(1, 6, 163, 0.48);
   text-shadow: 0 0 10px #6ae9ff, 0 0 20px #6ae9ff, 0 0 30px #fff, 0 0 40px rgba(17, 123, 255, 0.23), 0 0 70px rgba(17, 123, 255, 0.34), 0 0 80px rgba(17, 123, 255, 0.34), 0 0 100px rgba(17, 123, 255, 0.34), 0 0 150px rgba(17, 123, 255, 0.34);
@@ -107,7 +111,7 @@ body {
   text-decoration: none;
   text-align: center;
   font-family: trebuchet ms;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   color: white;
@@ -124,7 +128,26 @@ body {
   text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #cb0000, 0 0 7px #cb0000, 0 0 8px #cb0000, 0 0 10px #cb0000, 0 0 15px #cb0000;
 }
 
+#leftColumn {
+  //background-color: black;
+  //background-color: rgba(222, 242, 250, 0.65);
+  width: 150px;
+  height: 100%;
+  float: left;
+}
+
 .leftNavBar {
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(222, 242, 250, 0.33);
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0px 0px 0px 2px #888888 inset;
+}
+
+.leftNavBarx {
   border: 1px solid #3a3a3a;
   margin: 20px;
   padding: 10px;
@@ -176,7 +199,7 @@ body {
 .leftNavBar.neon a {
   text-decoration: none;
   font-family: "Andale Mono";
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   color: white;
@@ -188,29 +211,23 @@ body {
   max-width: 640px;
 }
 
-#leftColumn {
-  background-color: black;
-  width: 150px;
-  height: 100%;
-  float: left;
-}
-
 #mainArticlesSection {
   margin-left: 151px;
 }
-
 
 .flash.alert {
   color: red;
 }
 
 .blog {
-  margin: 20px;
+  margin: 0 45px 0 15px;
 }
 
 .blog .blogImage {
   width: 100px;
   height: 100px;
+  float: left;
+  padding-right: 15px;
 }
 
 .blog h1 {
@@ -221,10 +238,12 @@ body {
 .blog .blogBody {
   background-color: rgba(222, 242, 250, 0.65);
   box-shadow: 1px 1px 1px #888888;
+  max-height: 300px;
+  overflow-y: auto;
   border-radius: 4px;
   color: #333;
   padding: 10px;
-  width: 800px;
+  width: 100%;
 }
 
 .blog h1.blueNeon {
@@ -232,14 +251,13 @@ body {
   padding: 10px 40px 0 0px;
   font-size: 4em;
   font-family: 'Londrina Outline', cursive;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
   text-transform: uppercase;
   color: rgba(17, 80, 255, 0.36);
   text-shadow: 0 0 3px #fff, 0 0 5px #1102ff, 0 0 10px #fff, 0 0 15px #117bff, 0 0 20px #1e24ff, 0 0 30px #117bff, 0 0 40px #117bff, 0 0 55px #117bff;
 }
 
-.blog .blogImage {
-  float: left;
-  padding-right: 15px;
+.flickerEffect {
+
 }
 

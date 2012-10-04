@@ -34,15 +34,4 @@ $(document).ready()
             }
         );
     });
-
-    $("li").hover(
-        function () {
-            alert("here");
-            $(this).append($("<span> ***</span>"));
-        },
-        function () {
-            alert("there");
-            $(this).find("span:last").remove();
-        }
-    );
 }
