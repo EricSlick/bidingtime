@@ -11,23 +11,14 @@
 
 body {
   margin: auto;
-  padding: 20px 20px 20px 20px;
-  background-color: #eff4d3;
-  color: #7E9916;
-  //color: #ACBD4F;
-  //color: #B7C181;
-  //color: #D7DCBD;
-  //color: #EDEFE2;
-  //background-image: url("tilableplaster.jpg");
-  background-image: url("body_background.jpg");
-  background-repeat: repeat;
-  background-size: contain;
   min-width: 930px;
+  /*padding: 20px 20px 20px 20px;*/
+  /*background-color: #eff4d3;*/
 }
 
 #mainPageHeader {
   height: 325px;
-  margin-bottom: 25px;
+
   //background-color: #000000;
 }
 
@@ -37,6 +28,8 @@ body {
   margin: auto;
   height: 325px;
   width: 975px;
+  height: 100%;
+  width: 100%;
 }
 
 #mainPageHeader h1.pink {
@@ -91,9 +84,18 @@ body {
   text-shadow: 0 0 10px #6ae9ff, 0 0 20px #6ae9ff, 0 0 30px #fff, 0 0 40px rgba(17, 123, 255, 0.23), 0 0 70px rgba(17, 123, 255, 0.34), 0 0 80px rgba(17, 123, 255, 0.34), 0 0 100px rgba(17, 123, 255, 0.34), 0 0 150px rgba(17, 123, 255, 0.34);
 }
 
+#mainContent {
+  position: absolute;
+  background-image: url("body_background.jpg");
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+}
+
 #topNavbar {
-  background-color: black;
+  /*background-color: black;*/
   height: 40px;
+  background-image: url("horizontal_menu_bar.jpg");
 }
 
 #topNavbar ul {
@@ -110,22 +112,24 @@ body {
   position: relative;
   text-decoration: none;
   text-align: center;
-  font-family: trebuchet ms;
   font-family: 'Neon80s', 'Varela Round', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   color: white;
-  text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;
-  text-shadow: 0 0 1px #6ae9ff, 0 0 2px #6ae9ff, 0 0 3px #fff, 0 0 4px rgba(17, 123, 255, 0.23), 0 0 7px rgba(17, 123, 255, 0.34), 0 0 8px rgba(17, 123, 255, 0.34), 0 0 10px rgba(17, 123, 255, 0.34), 0 0 15px rgba(17, 123, 255, 0.34);
-  text-shadow: 0 0 1px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #117bff, 0 0 7px #1e24ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;
+  /*text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;*/
+  /*text-shadow: 0 0 1px #6ae9ff, 0 0 2px #6ae9ff, 0 0 3px #fff, 0 0 4px rgba(17, 123, 255, 0.23), 0 0 7px rgba(17, 123, 255, 0.34), 0 0 8px rgba(17, 123, 255, 0.34), 0 0 10px rgba(17, 123, 255, 0.34), 0 0 15px rgba(17, 123, 255, 0.34);*/
+  /*text-shadow: 0 0 1px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #117bff, 0 0 7px #1e24ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;*/
+  color: rgba(17, 80, 255, 0.90);
+  text-shadow: 0 0 2px #fff, 0 0 0px #1102ff, 0 0 10px #fff, 0 0 15px #06c9ff, 0 0 20px #3dc0ff, 0 0 30px #117bff, 0 0 40px #117bff, 0 0 55px #117bff;
+
 }
 
 #topNavbar.neon a:hover {
-  text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px #FF00DE, 0 0 2px #FF00DE, 0 0 3px #FF00DE, 0 0 4px #FF00DE, 0 0 5px #FF00DE;
+  /*text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px #FF00DE, 0 0 2px #FF00DE, 0 0 3px #FF00DE, 0 0 4px #FF00DE, 0 0 5px #FF00DE;*/
 }
 
 #topNavbar.neon a:active {
-  text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #cb0000, 0 0 7px #cb0000, 0 0 8px #cb0000, 0 0 10px #cb0000, 0 0 15px #cb0000;
+  /*text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #cb0000, 0 0 7px #cb0000, 0 0 8px #cb0000, 0 0 10px #cb0000, 0 0 15px #cb0000;*/
 }
 
 #leftColumn {
@@ -187,13 +191,16 @@ body {
 }
 
 .leftNavBar.neon a:hover {
-  text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px #FF00DE, 0 0 2px #FF00DE, 0 0 3px #FF00DE, 0 0 4px #FF00DE, 0 0 5px #FF00DE;
-  text-shadow: 0 0 1px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #117bff, 0 0 7px #1e24ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;
+  /*text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px #FF00DE, 0 0 2px #FF00DE, 0 0 3px #FF00DE, 0 0 4px #FF00DE, 0 0 5px #FF00DE;*/
+  /*color: #117BFF;*/
+  /*text-shadow: 0 0 1px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #117bff, 0 0 7px #1e24ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;*/
   background-color: rgba(255, 255, 255, 0);
+  color: rgba(17, 80, 255, 0.5);
+  text-shadow: 0 0 2px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #06c9ff, 0 0 5px #3dc0ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;
 }
 
 .leftNavBar.neon a:active {
-  text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #cb0000, 0 0 7px #cb0000, 0 0 8px #cb0000, 0 0 10px #cb0000, 0 0 15px #cb0000;
+  /*text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #cb0000, 0 0 7px #cb0000, 0 0 8px #cb0000, 0 0 10px #cb0000, 0 0 15px #cb0000;*/
 }
 
 .leftNavBar.neon a {
@@ -203,8 +210,11 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   color: white;
-  text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;
-  text-shadow: 0 0 1px #fff, 0 0 1px #1102ff, 0 0 1px #fff, 0 0 1px #117bff, 0 0 2px #1e24ff, 0 0 3px #117bff, 0 0 4px #117bff, 0 0 5px #117bff;
+  /*text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;*/
+  /*text-shadow: 0 0 1px #fff, 0 0 1px #1102ff, 0 0 1px #fff, 0 0 1px #117bff, 0 0 2px #1e24ff, 0 0 3px #117bff, 0 0 4px #117bff, 0 0 5px #117bff;*/
+  color: rgba(17, 80, 255, 0.90);
+  text-shadow: 0 0 2px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #06c9ff, 0 0 5px #3dc0ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;
+
 }
 
 .imageList {
@@ -255,6 +265,9 @@ body {
   text-transform: uppercase;
   color: rgba(17, 80, 255, 0.36);
   text-shadow: 0 0 3px #fff, 0 0 5px #1102ff, 0 0 10px #fff, 0 0 15px #117bff, 0 0 20px #1e24ff, 0 0 30px #117bff, 0 0 40px #117bff, 0 0 55px #117bff;
+
+  color: rgba(17, 80, 255, 0.90);
+  text-shadow: 0 0 2px #fff, 0 0 0px #1102ff, 0 0 10px #fff, 0 0 15px #06c9ff, 0 0 20px #3dc0ff, 0 0 30px #117bff, 0 0 40px #117bff, 0 0 55px #117bff;
 }
 
 .flickerEffect {

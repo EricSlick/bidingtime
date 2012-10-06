@@ -9,7 +9,7 @@
 <body>
 
 <div id="mainPageHeader">
-  <%= link_to(image_tag( image_path("main_header_image_dark.jpg"), :class => "header_image"), root_path) %>
+  <%= link_to(image_tag(image_path("main_header_image_dark.jpg"), :class => "header_image"), root_path) %>
   <!--<h1 class=blue>Biding Time</h1>-->
 </div>
 
@@ -38,59 +38,61 @@
   </ul>
 </div>
 
-<div id="leftColumn">
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="">Follow Twitter</a>
-      </li>
-      <li>
-        <a href="">IMDB</a>
-      </li>
-      <li>
-        <a href="">FB Like</a>
-      </li>
-      <li>
-        <a href="">Send</a>
-      </li>
-    </ul>
-  </div>
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="">Blog Archives</a>
-      </li>
-    </ul>
-  </div>
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="">Interview Archives</a>
-      </li>
-    </ul>
-  </div>
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="">Photo Essay Archives</a>
-      </li>
-    </ul>
-  </div>
-  <% if can? :manage, :all %>
+<div id="mainContent">
+  <div id="leftColumn">
     <div class="leftNavBar neon">
       <ul>
         <li>
-          <%= link_to("Admin", admin_path) %>
+          <a href="">Follow Twitter</a>
+        </li>
+        <li>
+          <a href="">IMDB</a>
+        </li>
+        <li>
+          <a href="">FB Like</a>
+        </li>
+        <li>
+          <a href="">Send</a>
         </li>
       </ul>
     </div>
-  <% end %>
-</div>
-<div id="mainArticlesSection">
-  <% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
-  <%= yield %>
+    <div class="leftNavBar neon">
+      <ul>
+        <li>
+          <a href="">Blog Archives</a>
+        </li>
+      </ul>
+    </div>
+    <div class="leftNavBar neon">
+      <ul>
+        <li>
+          <a href="">Interview Archives</a>
+        </li>
+      </ul>
+    </div>
+    <div class="leftNavBar neon">
+      <ul>
+        <li>
+          <a href="">Photo Essay Archives</a>
+        </li>
+      </ul>
+    </div>
+    <% if can? :manage, :all %>
+      <div class="leftNavBar neon">
+        <ul>
+          <li>
+            <%= link_to("Admin", admin_path) %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <div id="mainArticlesSection">
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+  </div>
 </div>
 
 <div id="footer">
@@ -101,15 +103,13 @@
 </html>
 
 <script>
-  $('a').hover(
-      function() {
-        $(this)
-            .css('color','blue')
-            .animate({'color': 'red'}, 400);
+  $('#topNavbar a').hover(
+      function () {
+        $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
       },
-      function() {
+      function () {
         $(this)
-            .animate({'color': 'blue'}, 400);
+            .animate({'opacity':'1.0'}, 200);
       }
   );
 </script>
