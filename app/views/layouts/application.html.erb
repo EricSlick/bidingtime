@@ -105,7 +105,16 @@
 </html>
 
 <script>
-  $('#topNavbar a').hover(
+  $('a').hover(
+      function () {
+        $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
+      },
+      function () {
+        $(this)
+            .animate({'opacity':'1.0'}, 200);
+      }
+  );
+  $('a').hover(
       function () {
         $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
       },
