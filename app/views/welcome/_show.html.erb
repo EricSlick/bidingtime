@@ -1,12 +1,12 @@
 
-<h1 class="blueNeon"><%= article.title %></h1>
-<div class="publish_date"><%= article.published_at.strftime('%B %d, %Y') %></div>
-<div class="author"><%= article.author %></div>
+<h1 class="blueNeon"><%= article.title.html_safe unless article.title.blank? %></h1>
+<div class="publish_date"><%= article.published_at.strftime('%B %d, %Y') unless article.published_at.blank? %></div>
+<div class="author"><%= article.author.html_safe unless article.author.blank? %></div>
 <div class="blogBody">
   <% unless article.image_url.blank? %>
   <div class="blogImage">
     <%= image_tag image_path(article.image_url), :class => "blogImage" %>
   </div>
   <% end %>
-  <%= article.body %>
+  <%= article.body.html_safe unless article.body.blank? %>
 </div>

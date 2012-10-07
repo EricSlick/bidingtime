@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :article_type %><br />
-    <%= f.select :article_type_id, options_for_select(ArticleType.all.map{|a| [a.name, a.id]}) %>
+    <%= f.select :article_type_id, options_for_select(ArticleType.all.map{|a| [a.name, a.id]}, :selected => @article.article_type_id) %>
   </div>
   <div class="field">
     <%= f.label :image_url %><br />
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :cols => 130, :rows => 50 %>
   </div>
   <div class="actions">
     <%= f.submit %>
