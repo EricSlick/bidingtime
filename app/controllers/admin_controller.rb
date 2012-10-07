@@ -7,7 +7,7 @@ class AdminController < ApplicationController
   end
 
   def check_authorization
-    redirect_to :root if cannot? :manage, :all
+    redirect_to login_path if cannot? :manage, :all
   end
 
 

@@ -31,8 +31,8 @@
       <a href="">Contact</a>
     </li>
     <li>
-      <%= link_to("Login", {:controller => "sessions", :action => "new"}) unless current_user %>
-      <%= link_to("or Create Account", {:controller => "users", :action => "new"}) unless current_user %>
+      <%#= link_to("Login", {:controller => "sessions", :action => "new"}) unless current_user %>
+      <%#= link_to("or Create Account", {:controller => "users", :action => "new"}) unless current_user %>
       <%= link_to("Logout", logout_path) unless current_user.nil? %>
     </li>
   </ul>

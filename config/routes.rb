@@ -2,12 +2,15 @@ Bidingtime::Application.routes.draw do
 
 
   resources :users
-  match "/logout", :to => "sessions#logout", :as => :logout
 
   resources :sessions
+  match "/logout", :to => "sessions#logout", :as => :logout
+  match "/login", :to => "sessions#new", :as => :login
 
   match "/admin", :to => "admin#index", :as => :admin
+
   resources :articles
+
   resources :article_types
 
 
