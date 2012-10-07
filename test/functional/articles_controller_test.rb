@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BlogsControllerTest < ActionController::TestCase
+class ArticlesControllerTest < ActionController::TestCase
   setup do
     @blog = blogs(:one)
   end
@@ -8,7 +8,7 @@ class BlogsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:blogs)
+    assert_not_nil assigns(:articles)
   end
 
   test "should get new" do
@@ -17,7 +17,7 @@ class BlogsControllerTest < ActionController::TestCase
   end
 
   test "should create blog" do
-    assert_difference('Blog.count') do
+    assert_difference('Article.count') do
       post :create, blog: { body: @blog.body, image_url: @blog.image_url, title: @blog.title }
     end
 
@@ -40,7 +40,7 @@ class BlogsControllerTest < ActionController::TestCase
   end
 
   test "should destroy blog" do
-    assert_difference('Blog.count', -1) do
+    assert_difference('Article.count', -1) do
       delete :destroy, id: @blog
     end
 

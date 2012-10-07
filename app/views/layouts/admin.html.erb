@@ -8,72 +8,12 @@
 </head>
 <body>
 
-<div id="mainPageHeader">
+<div id="adminHeader">
   <h1 class=blue3>Site Admin</h1>
 </div>
 
-<div id="topNavbar" class="neon">
-  <ul>
-    <li>
-      <a href="">About</a>
-    </li>
-    <li>
-      <%= link_to "Blogs", root_url(:blogs => "view"), :class => "active" %>
-    </li>
-    <li>
-      <%= link_to "Interviews", root_url(:interviews => "view"), :class => "active" %>
-    </li>
-    <li>
-      <a href="">Contact</a>
-    </li>
-    <li>
-      <%= link_to("Login", {:controller => "sessions", :action => "new"}) unless current_user %>
-      <%= link_to("or Create Account", {:controller => "users", :action => "new"}) unless current_user %>
-      <%= link_to("Logout", logout_path) unless current_user.nil? %>
-    </li>
-  </ul>
-</div>
-
 <div id="leftColumn">
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="">Follow Twitter</a>
-      </li>
-      <li>
-        <a href="">IMDB</a>
-      </li>
-      <li>
-        <a href="">FB Like</a>
-      </li>
-      <li>
-        <a href="">Send</a>
-      </li>
-    </ul>
-  </div>
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="">Blog Archives</a>
-      </li>
-    </ul>
-  </div>
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="">Interview Archives</a>
-      </li>
-    </ul>
-  </div>
-  <% if can? :manage,  :all %>
-    <div class="leftNavBar neon">
-      <ul>
-        <li>
-          <%= link_to("Admin", admin_path) %>
-        </li>
-      </ul>
-    </div>
-  <% end %>
+
 </div>
 <div id="adminSection">
   <% flash.each do |key, value| %>

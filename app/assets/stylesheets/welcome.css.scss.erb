@@ -84,13 +84,23 @@ body {
   text-shadow: 0 0 10px #6ae9ff, 0 0 20px #6ae9ff, 0 0 30px #fff, 0 0 40px rgba(17, 123, 255, 0.23), 0 0 70px rgba(17, 123, 255, 0.34), 0 0 80px rgba(17, 123, 255, 0.34), 0 0 100px rgba(17, 123, 255, 0.34), 0 0 150px rgba(17, 123, 255, 0.34);
 }
 
-#mainContent {
+#mainContentTop {
+  background-image: url("body_background.jpg") ;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 600px;
+  padding-top: 10px;
+}
+
+#mainContentBottom {
   position: absolute;
-  background-image: url("body_background.jpg");
+  background-image: url("body_background_tile.jpg");
+  z-index: -1;
   width: 100%;
   height: 100%;
   padding-top: 10px;
 }
+
 
 #topNavbar {
   /*background-color: black;*/
@@ -245,15 +255,25 @@ body {
   text-shadow: 1px 1px 1px #888888;
 }
 
+.blog .author {
+  color: #bdbdbd;
+  font-size: 1em;
+}
+
+.blog .publish_date {
+  color: #dcdcdc;
+  font-size: 1.1em;
+}
+
 .blog .blogBody {
   background-color: rgba(222, 242, 250, 0.65);
   box-shadow: 1px 1px 1px #888888;
-  max-height: 300px;
   overflow-y: auto;
   border-radius: 4px;
   color: #333;
   padding: 10px;
   width: 100%;
+  height: 100%;
 }
 
 .blog h1.blueNeon {

@@ -9,7 +9,7 @@
 <body>
 
 <div id="mainPageHeader">
-  <%= link_to(image_tag(image_path("main_header_image_dark.jpg"), :class => "header_image"), root_path) %>
+  <%= link_to(image_tag(image_path("HeaderImageFinal.jpg"), :class => "header_image"), root_path) %>
   <!--<h1 class=blue>Biding Time</h1>-->
 </div>
 
@@ -19,7 +19,7 @@
       <a href="" class="flickerEffect">About</a>
     </li>
     <li>
-      <%= link_to "Blogs", root_url(:blogs => "view"), :class => "active flickerEffect" %>
+      <%= link_to "Blogs", root_url(:articles => "view"), :class => "active flickerEffect" %>
     </li>
     <li>
       <%= link_to "Interviews", root_url(:interviews => "view"), :class => "active flickerEffect" %>
@@ -38,7 +38,7 @@
   </ul>
 </div>
 
-<div id="mainContent">
+<div id="mainContentTop">
   <div id="leftColumn">
     <div class="leftNavBar neon">
       <ul>
@@ -94,6 +94,8 @@
     <%= yield %>
   </div>
 </div>
+
+<div id="mainContentBottom"></div>
 
 <div id="footer">
 

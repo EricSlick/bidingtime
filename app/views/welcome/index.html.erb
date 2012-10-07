@@ -1,5 +1,11 @@
 <div class="blog">
-  <% @articles.each do |blog| %>
-    <%=  render :partial => "welcome/show", :locals => {:blog => blog} %>
+  <% @welcomes.each do |article| %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article} %>
+  <% end %>
+  <% @blogs.each do |article| %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article} %>
+  <% end %>
+  <% @interviews.each do |article| %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article} %>
   <% end %>
 </div>

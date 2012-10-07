@@ -2,10 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  padding: 30px 50px 50px 50px;
+}
+
+#adminHeader {
+  height: 75px;
+
+  //background-color: #000000;
+}
+
+#adminHeader h1 {
+  font-family: 'Neon80s', 'Varela Round', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: white;
+  color: rgba(17, 80, 255, 0.90);
+  text-shadow: 0 0 2px #fff, 0 0 0px #1102ff, 0 0 10px #fff, 0 0 15px #06c9ff, 0 0 20px #3dc0ff, 0 0 30px #117bff, 0 0 40px #117bff, 0 0 55px #117bff;
+
+}
+
 #adminSection {
   background-color: #efefef;
   padding: 20px;
-  margin-left: 151px;
+  margin-left: 50px;
 
 }
 
