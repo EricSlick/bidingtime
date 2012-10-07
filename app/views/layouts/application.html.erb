@@ -25,15 +25,15 @@
       <%= link_to "Interviews", root_url(:interviews => "view"), :class => "active flickerEffect" %>
     </li>
     <li>
-      <%= link_to "Photographic Essays", root_url(:essays => "view"), :class => "active flickerEffect" %>
+      <%= link_to "Photographic Essays", "#", :class => "active flickeredOut" %>
     </li>
     <li>
-      <a href="">Contact</a>
+      <a href="" class="flickerEffect">Contact</a>
     </li>
     <li>
       <%#= link_to("Login", {:controller => "sessions", :action => "new"}) unless current_user %>
       <%#= link_to("or Create Account", {:controller => "users", :action => "new"}) unless current_user %>
-      <%= link_to("Logout", logout_path) unless current_user.nil? %>
+      <%= link_to("Logout", logout_path, :class => "active flickerEffect") unless current_user.nil? %>
     </li>
   </ul>
 </div>
@@ -43,37 +43,37 @@
     <div class="leftNavBar neon">
       <ul>
         <li>
-          <a href="">Follow Twitter</a>
+          <a href="" class = "flickerEffect">Follow Twitter</a>
         </li>
         <li>
-          <a href="">IMDB</a>
+          <a href="" class = "flickerEffect">IMDB</a>
         </li>
         <li>
-          <a href="">FB Like</a>
+          <a href="" class = "flickerEffect">FB Like</a>
         </li>
         <li>
-          <a href="">Send</a>
-        </li>
-      </ul>
-    </div>
-    <div class="leftNavBar neon">
-      <ul>
-        <li>
-          <a href="">Blog Archives</a>
+          <a href="" class = "flickerEffect">Send</a>
         </li>
       </ul>
     </div>
     <div class="leftNavBar neon">
       <ul>
         <li>
-          <a href="">Interview Archives</a>
+          <a href="" class = "flickerEffect">Blog Archives</a>
         </li>
       </ul>
     </div>
     <div class="leftNavBar neon">
       <ul>
         <li>
-          <a href="">Photo Essay Archives</a>
+          <a href="" class = "flickerEffect">Interview Archives</a>
+        </li>
+      </ul>
+    </div>
+    <div class="leftNavBar neon">
+      <ul>
+        <li>
+          <a href="" class = "flickerEffect>Photo Essay Archives</a>
         </li>
       </ul>
     </div>
@@ -105,7 +105,7 @@
 </html>
 
 <script>
-  $('a').hover(
+  $('a.flickerEffect').hover(
       function () {
         $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
       },
@@ -114,13 +114,13 @@
             .animate({'opacity':'1.0'}, 200);
       }
   );
-  $('a').hover(
-      function () {
-        $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
-      },
-      function () {
-        $(this)
-            .animate({'opacity':'1.0'}, 200);
-      }
-  );
+//  $('a.flickerEffect').hover(
+//      function () {
+//        $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
+//      },
+//      function () {
+//        $(this)
+//            .animate({'opacity':'1.0'}, 200);
+//      }
+//  );
 </script>
