@@ -2,14 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  padding: 30px 50px 50px 50px;
-}
 
 #adminHeader {
-  height: 75px;
+  padding: 30px 50px 50px 50px;
+  background-color: #bac0c7;
 
-  //background-color: #000000;
 }
 
 #adminHeader h1 {
@@ -22,16 +19,48 @@ body {
 
 }
 
+#adminHeader a{
+  text-decoration: none;
+  color: rgba(17, 80, 255, 0.90);
+  text-shadow: 0 0 2px #fff, 0 0 0px #1102ff, 0 0 10px #fff, 0 0 15px #06c9ff, 0 0 20px #3dc0ff, 0 0 30px #117bff, 0 0 40px #117bff, 0 0 55px #117bff;
+}
+
+#adminHeader a:hover{
+  color: rgba(17, 80, 255, 0.90);
+  text-shadow: 0 0 2px #fff, 0 0 0px #1102ff, 0 0 10px #fff, 0 0 15px #06c9ff, 0 0 20px #3dc0ff, 0 0 30px #117bff, 0 0 40px #117bff, 0 0 55px #117bff;
+  background-color: rgba(0, 0, 0, 0);;
+}
+
 #adminSection {
   background-color: #efefef;
-  padding: 20px;
-  margin-left: 50px;
+  padding: 20px 20px 20px 50px;
 
 }
 
 #adminSection h1, h2 {
   color: black;
 }
+
+#adminSection table {
+  border-collapse: collapse;
+}
+
+#adminSection table th, td{
+  padding: 5px;
+}
+
+#adminSection table td{
+  border: 1px solid #c7c7c7;
+}
+
+#adminSection .even {
+  background-color: #e9e9e9;
+}
+
+#adminSection .odd {
+  background-color: #d7d7d7;
+}
+
 .admin {
   color: black;
 }

@@ -4,10 +4,12 @@ class WelcomeController < ApplicationController
     @blogs = []
     @interviews = []
     @welcomes = []
+    @essays = []
     if params[:interviews]
-      @interviews = Article.all
+      @interviews = Article.where(:article_type_id => 3).order(:created_at).limit(1)
     elsif params[:blogs]
-      @blogs = Article.all
+      @blogs = Article.where(:article_type_id => 2).order(:created_at).limit(1)
+    elsif params[:essays]
     else
       @welcomes = Article.where(:article_type_id => 1).order(:created_at).limit(1)
       @blogs = Article.where(:article_type_id => 2).order(:created_at).limit(1)

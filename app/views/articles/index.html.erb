@@ -1,9 +1,10 @@
 <div class="admin">
   <h2>Listing Articles</h2>
 
-  <table>
+  <table border='0'>
     <tr>
       <th>Title</th>
+      <th>Type</th>
       <th>Body</th>
       <th>Image url</th>
       <th></th>
@@ -12,9 +13,10 @@
     </tr>
 
     <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= "#{article.body[0..50]} ..." unless article.body.blank? %></td>
+      <tr class="<%= cycle("even", "odd") %>">
+        <td><%= article.title.html_safe unless article.title.blank? %></td>
+        <td><%= article.article_type.name.html_safe unless article.article_type.blank? %></td>
+        <td><%= "#{article.body[0..30]} ...".html_safe unless article.body.blank? %></td>
         <td><%= article.image_url %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
