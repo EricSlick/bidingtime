@@ -2,6 +2,12 @@
   <% @welcomes.each do |article| %>
     <%=  render :partial => "welcome/show", :locals => {:article => article} %>
   <% end %>
+  <% @abouts.each do |article| %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article} %>
+  <% end %>
+  <% @contacts.each do |article| %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article} %>
+  <% end %>
   <% @blogs.each do |article| %>
     <%=  render :partial => "welcome/show", :locals => {:article => article} %>
   <% end %>

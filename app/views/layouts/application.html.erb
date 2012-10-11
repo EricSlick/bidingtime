@@ -16,7 +16,7 @@
 <div id="topNavbar" class="neon">
   <ul>
     <li class="flickerEffect">
-      <a href="" class="flickerEffect">About</a>
+      <%= link_to "About", root_url(:about => "view"), :class => "active flickerEffect" %>
     </li>
     <li>
       <%= link_to "Blogs", root_url(:blogs => "view"), :class => "active flickerEffect" %>
@@ -28,7 +28,7 @@
       <%= link_to "Photographic Essays", "#", :class => "active flickeredOut" %>
     </li>
     <li>
-      <a href="" class="flickerEffect">Contact</a>
+      <%= link_to "Contact", root_url(:contact => "view"), :class => "active flickerEffect" %>
     </li>
     <li>
       <%#= link_to("Login", {:controller => "sessions", :action => "new"}) unless current_user %>

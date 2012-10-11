@@ -15,6 +15,8 @@ class ArticlesController < AdminController
   def show
     @article = Article.find(params[:id])
     @welcomes = []
+    @abouts = []
+    @contacts = []
     @blogs = []
     @interviews = []
     case @article.article_type.name
@@ -24,8 +26,12 @@ class ArticlesController < AdminController
         @blogs = [@article]
       when "interview"
         @interviews = [@article]
+      when "about"
+        @abouts = [@article]
+      when "contact"
+        @contacts = [@article]
       else
-        raise "Unknown article type"
+        raise "Admin/Articles: Unknown article type (#{@article.article_type.name})"
     end
 
     respond_to do |format|
