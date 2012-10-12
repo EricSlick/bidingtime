@@ -8,9 +8,19 @@ class WelcomeController < ApplicationController
     @contacts = []
     @essays = []
     if params[:interviews]
-      @interviews = Article.where(:article_type_id => 3, :published => true).order("created_at desc").limit(1)
+      if params[:interviews] == "view"
+        @interviews = Article.where(:article_type_id => 3, :published => true).order("created_at desc").limit(1)
+      else
+        @interviews = [Article.find(params[:interviews])]
+      end
     elsif params[:blogs]
-      @blogs = Article.where(:article_type_id => 2, :published => true).order("created_at desc").limit(1)
+      if params[:interviews] == "view"
+        @blogs = Article.where(:article_type_id => 2, :published => true).order("created_at desc").limit(1)
+      else
+        @blogs = [Article.find(params[:blogs])]
+        @previous = Article.where("id < ? and article_type_id = ? and published = ?", @blogs[0].id, @blogs[0].article_type_id, true).first
+        @next = Article.where("id > ? and article_type_id = ? and published = ?", @blogs[0].id, @blogs[0].article_type_id, true).first
+      end
     elsif params[:about]
       @abouts = Article.where(:article_type_id => 4, :published => true).order("created_at desc").limit(1)
     elsif params[:contact]

@@ -11,9 +11,11 @@
 
 body {
   margin: auto;
-  min-width: 930px;
+  min-width: 870px;
+  max-width: 1400px;
+  max-height: 1600px;
   /*padding: 20px 20px 20px 20px;*/
-  /*background-color: #eff4d3;*/
+  background-color: black;
 }
 
 #mainPageHeader {
@@ -85,28 +87,30 @@ body {
 }
 
 #mainContentTop {
-  background-image: url("body_background.jpg") ;
-  background-image: url("background_with_shadow1.jpg") ;
+  /*background-image: url("body_background.jpg") ;*/
+  /*background-image: url("background_with_shadow1.jpg") ;*/
+  position: absolute;
+  z-index: -1;
   background-image: url("background_with_shadow2.jpg") ;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   padding-top: 10px;
 }
 
 #mainContentBottom {
-  position: absolute;
+  position: relative;
   background-image: url("body_background_tile.jpg");
   z-index: -1;
   width: 100%;
   height: 100%;
-  padding-top: 10px;
 }
 
 
 #topNavbar {
   /*background-color: black;*/
   height: 40px;
-  background-image: url("horizontal_menu_bar.jpg");
+  background-image: url("horizontal_menu_bar20.jpg");
 }
 
 #topNavbar ul {
@@ -204,13 +208,7 @@ body {
 }
 
 .leftNavBar.neon a:hover {
-  /*text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px #FF00DE, 0 0 2px #FF00DE, 0 0 3px #FF00DE, 0 0 4px #FF00DE, 0 0 5px #FF00DE;*/
-  /*color: #117BFF;*/
-  /*text-shadow: 0 0 1px #fff, 0 0 2px #1102ff, 0 0 3px #fff, 0 0 4px #117bff, 0 0 7px #1e24ff, 0 0 8px #117bff, 0 0 10px #117bff, 0 0 15px #117bff;*/
   background-color: rgba(255, 255, 255, 0);
-  color: rgba(8, 31, 98, 0.89);
-  text-shadow: 0 0 1px #aaa, 0 0 0px #1102ff, 0 0 0px #06c9ff, 0 0 0px #3dc0ff, 0 0 0px #117bff, 0 0 0px #117bff, 0 0 0px #117bff;
-  opacity: .30;
 }
 
 .leftNavBar.neon a:active {
@@ -226,8 +224,9 @@ body {
   color: white;
   /*text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px #FF00DE, 0 0 7px #FF00DE, 0 0 8px #FF00DE, 0 0 10px #FF00DE, 0 0 15px #FF00DE;*/
   /*text-shadow: 0 0 1px #fff, 0 0 1px #1102ff, 0 0 1px #fff, 0 0 1px #117bff, 0 0 2px #1e24ff, 0 0 3px #117bff, 0 0 4px #117bff, 0 0 5px #117bff;*/
-  color: rgba(8, 31, 98, 0.89);
-  text-shadow: 0 0 1px #aaa, 0 0 0px #1102ff, 0 0 0px #06c9ff, 0 0 0px #3dc0ff, 0 0 0px #117bff, 0 0 0px #117bff, 0 0 0px #117bff;
+  /*color: rgba(8, 31, 98, 0.89);*/
+  /*text-shadow: 0 0 1px #aaa, 0 0 0px #1102ff, 0 0 0px #06c9ff, 0 0 0px #3dc0ff, 0 0 0px #117bff, 0 0 0px #117bff, 0 0 0px #117bff;*/
+  text-shadow: 1px 1px 10px black;
 
 }
 
@@ -237,6 +236,7 @@ body {
 
 #mainArticlesSection {
   margin-left: 151px;
+
 }
 
 .flash.alert {
@@ -257,6 +257,10 @@ body {
 .blog h1 {
   color: #0015ff;
   text-shadow: 1px 1px 1px #888888;
+}
+
+.blog a {
+  text-decoration: none;
 }
 
 .blog .author {
@@ -306,6 +310,32 @@ body {
   color: black;
   text-shadow: 0px 0px 1px white, 5px 5px 20px #000;
 
+}
+
+a.previous {
+  float: left;
+  color: black;
+  font-size: 10em;
+  padding-top: 20px;
+  text-shadow: 3px 3px 20px black;
+}
+
+a:hover.previous {
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+a.next {
+  float: right;
+  color: black;
+  font-size: 10em;
+  padding-top: 20px;
+  text-shadow: 3px 3px 20px black;
+}
+
+a:hover.next {
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .flickeredOut {
