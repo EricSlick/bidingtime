@@ -14,7 +14,7 @@ class WelcomeController < ApplicationController
         @interviews = [Article.find(params[:interviews])]
       end
     elsif params[:blogs]
-      if params[:interviews] == "view"
+      if params[:blogs] == "view"
         @blogs = Article.where(:article_type_id => 2, :published => true).order("created_at desc").limit(1)
       else
         @blogs = [Article.find(params[:blogs])]
