@@ -1,0 +1,19 @@
+<div id="new_comment">
+  <% if send(Opinio.current_user_method) %>
+    <h3><%= t('opinio.messages.add_comment') %></h3>
+    <%= form_for Comment.new, :remote => false do |f| %>
+      <div>
+        <%= f.text_area :body %>
+      </div>
+      <%= hidden_field_tag :commentable_id, commentable.id %>
+      <%= hidden_field_tag :commentable_type, commentable.class.base_class.name.to_s %>
+      <div class="input_button">
+        <%= f.submit t('opinio.actions.add') %>
+      </div>
+    <% end %>
+  <% else %>
+    <p>
+      <%= t('opinio.messages.must_be_logged_in_to_comment') %>
+    </p>
+  <% end %>
+</div>

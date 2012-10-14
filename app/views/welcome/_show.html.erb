@@ -9,8 +9,14 @@
   </div>
   <% end %>
   <%= article.body.html_safe unless article.body.blank? %>
+  <div class="comments_container">
+    <%= comments_for article, :page => params[:page], :limit => 1, :blah => "sigh"%>
+  </div>
 </div>
+
 <% if params[type.to_sym] && params[type.to_sym] != "view" %>
-  <%= link_to("&larr;".html_safe, root_url(type.to_sym => @previous.id), :class => "previous") if @previous %>
-  <%= link_to("&rarr;".html_safe, root_url(type.to_sym => @next.id), :class => "next") if @next %>
+  <div>
+    <%= link_to("&larr;".html_safe, root_url(type.to_sym => @previous.id), :class => "previous") if @previous %>
+    <%= link_to("&rarr;".html_safe, root_url(type.to_sym => @next.id), :class => "next") if @next %>
+  </div>
 <% end %>

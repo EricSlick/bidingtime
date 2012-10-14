@@ -1,6 +1,8 @@
 Bidingtime::Application.routes.draw do
 
 
+  opinio_model
+
   resources :users
 
   resources :sessions
@@ -9,7 +11,12 @@ Bidingtime::Application.routes.draw do
 
   match "/admin", :to => "admin#index", :as => :admin
 
-  resources :articles
+  resources :articles do
+  end
+
+  resources :welcomes do
+    opinio
+  end
 
   resources :article_types
 
