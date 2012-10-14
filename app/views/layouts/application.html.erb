@@ -38,68 +38,70 @@
   </ul>
 </div>
 
-<div id="mainContentTop"></div>
+<div id="mainContentBottom">
+  <div id="mainContentTop">
 
-<div id="leftColumn">
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="" class="flickerEffect">Follow Twitter</a>
-      </li>
-      <li>
-        <a href="" class="flickerEffect">IMDB</a>
-      </li>
-      <li>
-        <a href="" class="flickerEffect">FB Like</a>
-      </li>
-      <li>
-        <a href="" class="flickerEffect">Send</a>
-      </li>
-    </ul>
-  </div>
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="" class="flickerEffect">Blog Archives</a>
-      </li>
-    </ul>
-  </div>
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="" class="flickerEffect">Interview Archives</a>
-      </li>
-    </ul>
-  </div>
-  <div class="leftNavBar neon">
-    <ul>
-      <li>
-        <a href="" class="flickerEffect">Photo Essay Archives</a>
-      </li>
-    </ul>
-  </div>
-  <% if can? :manage, :all %>
-    <div class="leftNavBar neon">
-      <ul>
-        <li>
-          <%= link_to("Admin", admin_path) %>
-        </li>
-      </ul>
+    <div id="leftColumn">
+      <div class="leftNavBar neon">
+        <ul>
+          <li>
+            <a href="" class="flickerEffect">Follow Twitter</a>
+          </li>
+          <li>
+            <a href="" class="flickerEffect">IMDB</a>
+          </li>
+          <li>
+            <a href="" class="flickerEffect">FB Like</a>
+          </li>
+          <li>
+            <a href="" class="flickerEffect">Send</a>
+          </li>
+        </ul>
+      </div>
+      <div class="leftNavBar neon">
+        <ul>
+          <li>
+            <a href="" class="flickerEffect">Blog Archives</a>
+          </li>
+        </ul>
+      </div>
+      <div class="leftNavBar neon">
+        <ul>
+          <li>
+            <a href="" class="flickerEffect">Interview Archives</a>
+          </li>
+        </ul>
+      </div>
+      <div class="leftNavBar neon">
+        <ul>
+          <li>
+            <a href="" class="flickerEffect">Photo Essay Archives</a>
+          </li>
+        </ul>
+      </div>
+      <% if can? :manage, :all %>
+        <div class="leftNavBar neon">
+          <ul>
+            <li>
+              <%= link_to("Admin", admin_path) %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
-<div id="mainArticlesSection">
-  <% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
-  <%= yield %>
-  <div id="mainContentBottom"></div>
+    <div id="mainArticlesSection">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </div>
+  <div id="footer">
+  </div>
 </div>
 
 
-<div id="footer">
 
-</div>
 
 </body>
 </html>
@@ -111,21 +113,21 @@
       },
       function () {
         $(this).
-                animate({'opacity':'0.55'}, 50).
-                animate({'opacity':'0.75'}, 50).
-                animate({'opacity':'0.55'}, 50).
-                animate({'opacity':'1.0'}, 100)
+            animate({'opacity':'0.55'}, 50).
+            animate({'opacity':'0.75'}, 50).
+            animate({'opacity':'0.55'}, 50).
+            animate({'opacity':'1.0'}, 100)
         ;
       }
   );
-    $('a.flickerEffect').hover(
-        function () {
-          $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
-        },
-        function () {
-          $(this).
-              animate({'opacity':'1.0'}, 100)
-          ;
-        }
-    );
+  $('a.flickerEffect').hover(
+      function () {
+        $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
+      },
+      function () {
+        $(this).
+            animate({'opacity':'1.0'}, 100)
+        ;
+      }
+  );
 </script>
