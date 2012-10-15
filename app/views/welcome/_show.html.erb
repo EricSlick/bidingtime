@@ -1,28 +1,28 @@
-
 <%= link_to("<h1 class='blueNeon'>#{article.title.html_safe unless article.title.blank?}</h1>".html_safe, root_url(type.to_sym => article.id)) %>
 <div class="publish_date"><%= article.published_at.strftime('%B %d, %Y') unless article.published_at.blank? %></div>
-<div class="author"><%= article.author.html_safe unless article.author.blank? %></div>
+<div class="author"><%= article.author.html_safe unless article.author.blank? %>
+  <% if params[:blogs] || params[:interviews] != "view" %>
+  <span class="right">
+    <%= link_to("&larr;".html_safe, root_url(type.to_sym => @previous.id), :class => "previous") if @previous %>
+    <%= link_to("&rarr;".html_safe, root_url(type.to_sym => @next.id), :class => "next") if @next %>
+  </span>
+  <% end %>
+</div>
 <div class="blogBody">
   <% unless article.image_url.blank? %>
-  <div class="blogImage">
-    <%= image_tag image_path(article.image_url), :class => "blogImage" %>
-  </div>
+    <div class="blogImage">
+      <%= image_tag image_path(article.image_url), :class => "blogImage" %>
+    </div>
   <% end %>
   <%= article.body.html_safe unless article.body.blank? %>
   <% if (type == "blogs" || type == "interviews") %>
     <div class="comments_container">
-      <% if params[type.to_sym] && params[type.to_sym] != "view" %>
-        <%= comments_for article, :page => params[:page], :limit => 10, :blah => "sigh"%>
+      <% if params[:blogs] || params[:interviews] %>
+        <%= comments_for article, :page => params[:page], :limit => 10, :blah => "sigh" %>
       <% else %>
-        <%= render_comments article, :page => 1, :limit => 1, :blah => "sigh"%>
+        <%= render_comments article, :page => 1, :limit => 1, :blah => "sigh" %>
       <% end %>
     </div>
-    <% end %>
+  <% end %>
 </div>
 
-<% if params[type.to_sym] && params[type.to_sym] != "view" %>
-  <div>
-    <%= link_to("&larr;".html_safe, root_url(type.to_sym => @previous.id), :class => "previous") if @previous %>
-    <%= link_to("&rarr;".html_safe, root_url(type.to_sym => @next.id), :class => "next") if @next %>
-  </div>
-<% end %>

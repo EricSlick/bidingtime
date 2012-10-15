@@ -13,14 +13,16 @@ class WelcomeController < ApplicationController
       else
         @interviews = [Article.find(params[:interviews])]
       end
+      @previous = Article.where("id < ? and article_type_id = ? and published = ?", @interviews[0].id, @interviews[0].article_type_id, true).order("created_at desc").first
+      @next = Article.where("id > ? and article_type_id = ? and published = ?", @interviews[0].id, @interviews[0].article_type_id, true).order("created_at desc").last
     elsif params[:blogs]
       if params[:blogs] == "view"
         @blogs = Article.where(:article_type_id => 2, :published => true).order("created_at desc").limit(1)
       else
         @blogs = [Article.find(params[:blogs])]
-        @previous = Article.where("id < ? and article_type_id = ? and published = ?", @blogs[0].id, @blogs[0].article_type_id, true).first
-        @next = Article.where("id > ? and article_type_id = ? and published = ?", @blogs[0].id, @blogs[0].article_type_id, true).first
       end
+      @previous = Article.where("id < ? and article_type_id = ? and published = ?", @blogs[0].id, @blogs[0].article_type_id, true).order("created_at desc").first
+      @next = Article.where("id > ? and article_type_id = ? and published = ?", @blogs[0].id, @blogs[0].article_type_id, true).order("created_at desc").last
     elsif params[:about]
       @abouts = Article.where(:article_type_id => 4, :published => true).order("created_at desc").limit(1)
     elsif params[:contact]
