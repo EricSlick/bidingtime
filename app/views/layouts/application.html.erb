@@ -38,6 +38,7 @@
         $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
       },
       function () {
+        if( $(this).is(':animated') ) {return;}
         $(this).
             animate({'opacity':'0.55'}, 50).
             animate({'opacity':'0.75'}, 50).
@@ -48,6 +49,7 @@
   );
   $('a.flickerEffect').hover(
       function () {
+        if( $(this).is(':animated') ) {return;}
         $(this).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.55'}, 50).animate({'opacity':'0.75'}, 50).animate({'opacity':'0.25'}, 100);
       },
       function () {
@@ -57,3 +59,4 @@
       }
   );
 </script>
+

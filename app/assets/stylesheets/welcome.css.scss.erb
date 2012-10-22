@@ -93,11 +93,11 @@ body {
   //background-color: rgba(222, 242, 250, 0.65);
   float: left;
   display: inline;
-  background-color: #87ceeb;
+  /*background-color: #87ceeb;*/
   width: 260px;
   border-right: 4px solid black;
   padding-right: 15px;
-  margin: 20px 10px 0px 10px;
+  margin: 20px 10px 20px 10px;
   overflow: hidden;
 }
 
@@ -130,6 +130,13 @@ body {
 .leftNavBar a {
   text-decoration: none;
   text-transform: uppercase;
+  background-color: rgba(0,0,0,0);
+  color: black;
+}
+
+.leftNavBar a:hover {
+  color: black;
+  background-color: rgba(0,0,0,0);
 }
 
 .leftNavBar#archives {
@@ -186,14 +193,22 @@ body {
   font-size: 64px;
   line-height: 64px;
 }
+.leftNavBar.adminLink {
+  padding: 20px;
+  margin: auto;
+}
 
 #twitterFeed {
   padding: 10px;
   height: 100%;
   max-height: 300px;
-  overflow: auto;
+  overflow: hidden;
   width: 255px;
   /*background-color: #87ceeb;*/
+}
+
+#twitterFeed:hover {
+  overflow: auto;
 }
 
 .imageList {
@@ -201,9 +216,10 @@ body {
 }
 
 #mainArticlesSection {
-  margin-left: 290px;
+  border-left: 4px solid black;
+  margin: 20px 0 20px 285px;
   width: 1110px;
-  background-color: #cc0000;
+  /*background-color: #cc0000;*/
   height: 100%;
 
 }
@@ -248,11 +264,13 @@ body {
 
 .blog h1 {
   margin: 0;
-  padding-top: 10px;
+  padding: 5px 10px 5px 10px;
   font-size: 4em;
   line-height: normal;
   text-transform: uppercase;
   color: black;
+  background-color: #c8c8c8
+  ;
 
 }
 
@@ -319,6 +337,7 @@ a:hover.next {
   border: 0;
   padding: 10px;
   color: #222;
+  border: 1px solid #ececec;
 }
 .comments_container form div {
   width: 100%;
