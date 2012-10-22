@@ -1,0 +1,22 @@
+<ul>
+  <li class="flickerEffect">
+    <%= link_to "About", root_url(:about => "view"), :class => "active flickerEffect" %>
+  </li>
+  <li>
+    <%= link_to "Blogs", root_url(:blogs => "view"), :class => "active flickerEffect" %>
+  </li>
+  <li>
+    <%= link_to "Interviews", root_url(:interviews => "view"), :class => "active flickerEffect" %>
+  </li>
+  <li>
+    <%= link_to "Photographic Essays", "#", :class => "active flickeredOut" %>
+  </li>
+  <li>
+    <%= link_to "Contact", root_url(:contact => "view"), :class => "active flickerEffect" %>
+  </li>
+  <li>
+    <%#= link_to("Login", {:controller => "sessions", :action => "new"}) unless current_user %>
+    <%#= link_to("or Create Account", {:controller => "users", :action => "new"}) unless current_user %>
+    <%= link_to("Logout", logout_path, :class => "active flickerEffect") unless current_user.nil? %>
+  </li>
+</ul>

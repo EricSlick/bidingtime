@@ -7,101 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
 <div id="mainPageHeader">
   <%= link_to(image_tag(image_path("top_header20.jpg"), :class => "header_image"), root_path) %>
-  <!--<h1 class=blue>Biding Time</h1>-->
 </div>
-
 <div id="topNavbar" class="neon">
-  <ul>
-    <li class="flickerEffect">
-      <%= link_to "About", root_url(:about => "view"), :class => "active flickerEffect" %>
-    </li>
-    <li>
-      <%= link_to "Blogs", root_url(:blogs => "view"), :class => "active flickerEffect" %>
-    </li>
-    <li>
-      <%= link_to "Interviews", root_url(:interviews => "view"), :class => "active flickerEffect" %>
-    </li>
-    <li>
-      <%= link_to "Photographic Essays", "#", :class => "active flickeredOut" %>
-    </li>
-    <li>
-      <%= link_to "Contact", root_url(:contact => "view"), :class => "active flickerEffect" %>
-    </li>
-    <li>
-      <%#= link_to("Login", {:controller => "sessions", :action => "new"}) unless current_user %>
-      <%#= link_to("or Create Account", {:controller => "users", :action => "new"}) unless current_user %>
-      <%= link_to("Logout", logout_path, :class => "active flickerEffect") unless current_user.nil? %>
-    </li>
-  </ul>
+  <%= render :partial => "layouts/top_nav_bar" %>
 </div>
 
-<div id="mainContentBottom">
-  <div id="mainContentTop">
-
-    <div id="leftColumn">
-      <div class="leftNavBar neon">
-        <ul>
-          <li>
-            <a href="" class="flickerEffect">Follow Twitter</a>
-          </li>
-          <li>
-            <a href="" class="flickerEffect">IMDB</a>
-          </li>
-          <li>
-            <a href="" class="flickerEffect">FB Like</a>
-          </li>
-          <li>
-            <a href="" class="flickerEffect">Send</a>
-          </li>
-        </ul>
-      </div>
-      <div class="leftNavBar neon">
-        <ul>
-          <li>
-            <a href="" class="flickerEffect">Blog Archives</a>
-          </li>
-        </ul>
-      </div>
-      <div class="leftNavBar neon">
-        <ul>
-          <li>
-            <a href="" class="flickerEffect">Interview Archives</a>
-          </li>
-        </ul>
-      </div>
-      <div class="leftNavBar neon">
-        <ul>
-          <li>
-            <a href="" class="flickerEffect">Photo Essay Archives</a>
-          </li>
-        </ul>
-      </div>
-      <% if can? :manage, :all %>
-        <div class="leftNavBar neon">
-          <ul>
-            <li>
-              <%= link_to("Admin", admin_path) %>
-            </li>
-          </ul>
-        </div>
-      <% end %>
-    </div>
-    <div id="mainArticlesSection">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
-      <%= yield %>
-    </div>
+<div id="mainContent">
+  <div id="leftColumn">
+    <%= render :partial => 'layouts/left_nav_bar' %>
+  </div>
+  <div id="mainArticlesSection">
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
   </div>
   <div id="footer">
+    <%=  render :partial => 'layouts/footer' %>
   </div>
 </div>
-
-
-
 
 </body>
 </html>
