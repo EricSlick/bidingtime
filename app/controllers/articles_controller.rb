@@ -19,6 +19,7 @@ class ArticlesController < AdminController
     @contacts = []
     @blogs = []
     @interviews = []
+    @lean_years = []
     case @article.article_type.name
       when "welcome"
         @welcomes = [@article]
@@ -30,6 +31,8 @@ class ArticlesController < AdminController
         @abouts = [@article]
       when "contact"
         @contacts = [@article]
+      when "lean_years"
+        @lean_years = [@article]
       else
         raise "Admin/Articles: Unknown article type (#{@article.article_type.name})"
     end
