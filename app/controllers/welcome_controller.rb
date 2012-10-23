@@ -18,7 +18,6 @@ class WelcomeController < ApplicationController
       @previous = Article.where("id < ? and article_type_id = ? and published = ?", @interviews[0].id, @interviews[0].article_type_id, true).order("created_at desc").first
       @next = Article.where("id > ? and article_type_id = ? and published = ?", @interviews[0].id, @interviews[0].article_type_id, true).order("created_at desc").last
     elsif params[:blogs]
-      @more = true;
       if params[:blogs] == "view"
         @blogs = Article.where(:article_type_id => 2, :published => true).order("created_at desc").limit(1)
       else
