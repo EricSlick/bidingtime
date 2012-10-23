@@ -27,7 +27,7 @@ class WelcomeController < ApplicationController
       @next = Article.where("id > ? and article_type_id = ? and published = ?", @blogs[0].id, @blogs[0].article_type_id, true).order("created_at desc").last
     elsif params[:about]
       @abouts = Article.where(:article_type_id => 4, :published => true).order("created_at desc").limit(1)
-    elsif params[:leanyears]
+    elsif params[:lean_years]
       @lean_years = Article.where(:article_type_id => 6, :published => true).order("created_at desc").limit(1)
     elsif params[:contact]
       @contacts = Article.where(:article_type_id => 5, :published => true).order("created_at desc").limit(1)
