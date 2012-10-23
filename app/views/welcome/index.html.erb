@@ -1,17 +1,20 @@
 <div class="blog">
   <% @welcomes.each do |article| %>
-    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "welcomes"} %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "welcomes", :more => false} %>
   <% end %>
   <% @abouts.each do |article| %>
-    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "abouts"} %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "abouts", :more => false} %>
   <% end %>
   <% @contacts.each do |article| %>
-    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "contacts"} %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "contacts", :more => false} %>
   <% end %>
   <% @blogs.each do |article| %>
-    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "blogs"} %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "blogs", :more => @more} %>
   <% end %>
   <% @interviews.each do |article| %>
-    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "interviews"} %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "interviews", :more => @more} %>
+  <% end %>
+  <% @lean_years.each do |article| %>
+    <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "lean_years", :more => false} %>
   <% end %>
 </div>

@@ -14,7 +14,13 @@
       <%= image_tag image_path(article.image_url), :class => "blogImage" %>
     </div>
   <% end %>
-  <%= article.body.html_safe unless article.body.blank? %>
+  <% if more && article.body.length > 800%>
+    <% last_space = article.body.rindex(" ", 800) %>
+    <%= article.body[0..last_space].html_safe unless article.body.blank? %>
+    <%=  link_to("<span class='more'>&hellip; more</span>".html_safe, root_url(type.to_sym => article.id), :class => "flickerEffect") %>
+  <% else %>
+    <%= article.body.html_safe unless article.body.blank? %>
+  <% end %>
   <% if (type == "blogs" || type == "interviews") %>
     <div class="comments_container">
       <% if params[:blogs] || params[:interviews] %>

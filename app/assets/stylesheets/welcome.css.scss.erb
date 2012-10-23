@@ -51,6 +51,39 @@ body {
   clear: both;
 }
 
+#footer a {
+  color: gray;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #9a9a9a;
+  text-decoration: none;
+}
+
+#footer p {
+  color: gray;
+  margin: 0;
+  padding: 0;
+  line-height: 10px;
+}
+
+#footer p.small {
+  font-size: 10px;
+  line-height: 10px;
+}
+#footer p.medium {
+  font-size: 12px;
+  line-height: 12px;
+}
+#footer p.large {
+  font-size: 16px;
+  line-height: 16px;
+}
+#footer p.giant {
+  font-size: 20px;
+  line-height: 20px;
+}
 
 #topNavbar {
   background-color: black;
@@ -243,6 +276,10 @@ body {
 .blog a {
   text-decoration: none;
 }
+.blog a:hover {
+  color: #000;
+  background-color: rgba(0,0,0,0);
+}
 
 .blog .author {
   color: #8a8a8a;
@@ -260,8 +297,15 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #333;
   padding: 10px;
+  margin-right: 10px;
   width: 100%;
   height: 100%;
+}
+
+.blog .blogBody .more {
+  background-color: #ddd;
+  padding: 0px 16px 2px 4px;
+  border-radius: 4px 10px 10px 4px;
 }
 
 
@@ -272,15 +316,15 @@ body {
   line-height: normal;
   text-transform: uppercase;
   color: black;
-  background-color: #c8c8c8
-  ;
+  background-color: #c8c8c8;
+  width: 100%
 
 }
 
 a.previous {
   color: black;
   font-size: 75px;
-  text-shadow: 3px 3px 20px black;
+  /*text-shadow: 3px 3px 20px black;*/
 
 }
 
@@ -292,7 +336,7 @@ a:hover.previous {
 a.next {
   color: black;
   font-size: 75px;
-  text-shadow: 3px 3px 20px black;
+  /*text-shadow: 3px 3px 20px black;*/
 }
 
 .left {
@@ -340,7 +384,7 @@ a:hover.next {
   border: 0;
   padding: 10px;
   color: #222;
-  border: 1px solid #ececec;
+  border: 1px solid #e7e7e7;
 }
 .comments_container form div {
   width: 100%;
@@ -352,15 +396,24 @@ a:hover.next {
   width: 100%;
   margin-top: 10px;
   color: #222;
+  border: 1px solid #e7e7e7;
 }
 
 #no_comments {
   border-radius: 3px;
-  border: 1px solid #ececec;
+  border: 1px solid #e7e7e7;
 }
 
 .comments_container form div.input_button {
-  box-shadow: 1px 1px 20px #222222, inset 0px 0px 50px #222;
+  box-shadow:  inset -5px -5px 10px #bbb;
+  width: 150px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+.comments_container form div.input_button:hover {
+  box-shadow:  inset -2px -2px 20px #bbb;
   width: 150px;
   border-radius: 10px;
   margin-top: 4px;
@@ -369,8 +422,7 @@ a:hover.next {
 .comments_container form input {
   width: 100%;
   background-color: rgba(0,0,0,0);
-  color: #dcdcdc;
+  color: #333;
   border-radius: 10px;
-  border-color: #666;
   border-width: 1px;
 }
