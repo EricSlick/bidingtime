@@ -28,7 +28,13 @@ class WelcomeController < ApplicationController
     elsif params[:about]
       @abouts = Article.where(:article_type_id => 4, :published => true).order("created_at desc").limit(1)
     elsif params[:lean_years]
-      @lean_years = Article.where(:article_type_id => 6, :published => true).order("created_at desc").limit(1)
+      if params[:lean_years] == "view"
+        @lean_years = Article.where(:article_type_id => 6, :published => true).order("created_at desc").limit(1)
+      else
+        @lean_years = [Article.find(params[:lean_years])]
+      end
+      @previous = Article.where("id < ? and article_type_id = ? and published = ?", @lean_years[0].id, @lean_years[0].article_type_id, true).order("created_at desc").first
+      @next = Article.where("id > ? and article_type_id = ? and published = ?", @lean_years[0].id, @lean_years[0].article_type_id, true).order("created_at desc").last
     elsif params[:contact]
       @contacts = Article.where(:article_type_id => 5, :published => true).order("created_at desc").limit(1)
     elsif params[:essays]

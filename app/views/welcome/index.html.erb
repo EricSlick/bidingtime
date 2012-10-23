@@ -14,7 +14,9 @@
   <% @interviews.each do |article| %>
     <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "interviews", :more => @more} %>
   <% end %>
+  <div id="lean_years">
   <% @lean_years.each do |article| %>
     <%=  render :partial => "welcome/show", :locals => {:article => article, :type => "lean_years", :more => false} %>
   <% end %>
+  </div>
 </div>
