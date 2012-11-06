@@ -9,6 +9,8 @@ gem 'pg'
 gem 'cancan'
 gem 'bcrypt-ruby'
 gem 'opinio'
+gem 'imgkit'
+gem 'mini_magick'
 
 
 # Gems used only for assets and not required

@@ -14,13 +14,22 @@ class ArticlesController < AdminController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    setup_show_vars
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @article }
+    end
+  end
+
+  def setup_show_vars
     @welcomes = []
     @abouts = []
     @contacts = []
     @blogs = []
     @interviews = []
     @lean_years = []
-    case @article.article_type.name
+    @type = @article.article_type.name
+    case @type
       when "welcome"
         @welcomes = [@article]
       when "blog"
@@ -37,10 +46,6 @@ class ArticlesController < AdminController
         raise "Admin/Articles: Unknown article type (#{@article.article_type.name})"
     end
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @article }
-    end
   end
 
   # GET /articles/new
@@ -82,6 +87,33 @@ class ArticlesController < AdminController
   # PUT /articles/1.json
   def update
     @article = Article.find(params[:id])
+
+    setup_show_vars
+    @articles = [@article]
+
+    ## Get the initial html screen as it normally renders
+    html = render_to_string("welcome/index",  :layout => "imaging")
+    kit = IMGKit.new(html, :quality => 80)
+    kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/welcome.css.scss.erb"
+    kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/scaffolds.css.scss"
+    @image = kit.to_img(:jpg)
+    kit.to_file("#{Rails.root}/app/assets/images/html/article_#{@article.id}.jpg")
+    render "welcome/index", :layout => "imaging"
+    return
+
+    ## image magick is being an ass on RubyMine so using html method to clip image
+    #image = MiniMagick::Image.open("#{Rails.root}/app/assets/images/html/article_#{@article.id}.jpg")
+    #image.resize "100x100"
+    #image.write  "#{Rails.root}/app/assets/images/html/article_#{@article.id}.jpg"
+    #render "clip_image", :layout => "clip_image"
+    #return
+
+    ## Use html to clip the image down to the size wanted
+    #html = render_to_string "clip_image", :layout => "clip_image"
+    #kit = IMGKit.new(html, :quality => 80)
+    #kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/welcome.css.scss.erb"
+    #@image = kit.to_img(:jpg)
+    kit.to_file("#{Rails.root}/app/assets/images/html/article_#{@article.id}.jpg")
 
     respond_to do |format|
       if @article.update_attributes(params[:article])

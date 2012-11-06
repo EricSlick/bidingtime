@@ -50,5 +50,21 @@ class WelcomeController < ApplicationController
     end
   end
 
+  def archives
+    @type = params[:archive]
+    @articles = []
+    case @type
+      when "blog"
+        @articles = Article.where(:article_type_id => 2, :published => true).order("created_at desc")
+      when "interview"
+        @articles = Article.where(:article_type_id => 3, :published => true).order("created_at desc")
+      #when "photo"
+      #  @articles = Article.where(:article_type_id => 2, :published => true).order("created_at desc")
+      else
+        redirect_to :root
+        return
+    end
+  end
+
 end
 

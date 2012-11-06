@@ -12,6 +12,8 @@
   <% unless article.image_url.blank? %>
     <div class="blogImage">
       <%= image_tag image_path(article.image_url), :class => "blogImage" %>
+      <%#= image_tag "#{Rails.root}/app/assets/images/#{article.image_url}", :class => "blogImage" %>
+
     </div>
   <% end %>
   <% if more && article.body.length > 800%>

@@ -22,17 +22,20 @@
   <ul>
     <li>
       <div id="blog_archive" class="fulljustify small_gray">
-        <a href="" class="flickerEffect">B l o g &nbsp; A r c h i v e</a></div>
+        <%= link_to "B l o g &nbsp; A r c h i v e".html_safe, archives_path(:archive => "blog"), :class => "flickerEffect" %>
+       </div>
       <div style="clear:both; height: 0px;"></div>
     </li>
     <li>
       <div id="interview_archive" class="fulljustify small_gray">
-        <a href="" class="flickerEffect">I n t e r v i e w &nbsp; A r c h i v e</a></div>
+        <%= link_to "I n t e r v i e w &nbsp; A r c h i v e".html_safe, archives_path(:archive => "interview"), :class => "flickerEffect" %>
+      </div>
       <div style="clear:both; height: 0px;"></div>
     </li>
     <li>
       <div id="essay_archive" class="fulljustify small_gray">
-        <a href="" class="flickerEffect">P h o t o &nbsp; E s s a y s</a></div>
+        <%= link_to "P h o t o &nbsp; E s s a y s".html_safe, archives_path(:archive => "photo"), :class => "flickerEffect" %>
+      </div>
       <div style="clear:both; height: 0px;"></div>
     </li>
   </ul>

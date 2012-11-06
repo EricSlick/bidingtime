@@ -1,0 +1,37 @@
+<% article = @article
+   type = @type
+   more = false
+%>
+<!DOCTYPE html>
+<html style="background-color: #87ceeb; background-size: contain;">
+<head>
+  <title>Bidingtime</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%#= csrf_meta_tags %>
+</head>
+<body style="max-width: 400px; min-width: 400px; max-height: 400px; min-height: 400px; overflow:  hidden; white-space: nowrap; display: block; xbox-shadow: #000000 5px 5px 20px;">
+<div id="mainContent" style=" max-width: 400px; max-height: 400px; min-height: 400px; min-width: 400px; overflow: hidden;">
+  <div id="mainArticlesSection" style="margin-left: -10px; margin-top: 10px; max-width: 440px; min-width: 440px; max-height: 400px; min-height: 400px; overflow: hidden;">
+    <div class="blog" style="width: 440px; max-width: 440px;">
+
+      <%= link_to("<h1>#{article.title.html_safe unless article.title.blank?}</h1>".html_safe, root_url(type.to_sym => article.id)) %>
+      <div style="width: 440px; max-width: 440px;" class="publish_date"><%= article.published_at.strftime('%B %d, %Y') unless article.published_at.blank? %></div>
+      <div style="width: 440px; max-width: 440px;" class="author"><%= article.author.html_safe unless article.author.blank? %></div>
+      <div class="blogBody" style="width: 440px; max-width: 440px;">
+        <% unless article.image_url.blank? %>
+          <div class="blogImage">
+            <%= image_tag image_path(article.image_url), :class => "blogImage" %>
+            <%#= image_tag "#{Rails.root}/app/assets/images/#{article.image_url}", :class => "blogImage" %>
+
+          </div>
+        <% end %>
+        <%= article.body.html_safe unless article.body.blank? %>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+

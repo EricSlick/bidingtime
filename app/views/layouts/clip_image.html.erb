@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bidingtime</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="imgkit-crop-h" content="99">
+  <meta name="imgkit-crop-w" content="63">
+  <meta name="imgkit-height" content="99">
+  <meta name="imgkit-width" content="63">
+</head>
+<body>
+  <div style="max-width: 400px; max-height: 400px; overflow:  hidden; xbox-shadow: #000000 5px 5px 20px;">
+    <%= yield %>
+  </div>
+</body>
+</html>
+

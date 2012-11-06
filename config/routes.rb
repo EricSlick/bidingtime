@@ -10,6 +10,7 @@ Bidingtime::Application.routes.draw do
   match "/login", :to => "sessions#new", :as => :login
 
   match "/admin", :to => "admin#index", :as => :admin
+  match "/archives", :to => "welcome#archives", :as => :archives
 
   resources :articles do
   end
