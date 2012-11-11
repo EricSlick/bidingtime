@@ -1,6 +1,6 @@
 <% reply = defined?(reply) ? reply : false %>
 <li id="comment_<%= comment.id %>">
-  <span>User: <%= comment.owner.id %></span>
+  <span><%=  comment.owner.email == "guest" ? "Guest" : "Admin" %><%#= comment.owner.id %></span>
   <p>
     <%= simple_format(comment.body) %>
   </p>

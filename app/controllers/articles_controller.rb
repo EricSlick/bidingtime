@@ -15,6 +15,11 @@ class ArticlesController < AdminController
   def show
     @article = Article.find(params[:id])
     setup_show_vars
+    if current_user.email == "guest"
+      redirect_to root_path(@type.pluralize => @article.id)
+      return
+    end
+    redirect_to login_path and return if cannot? :manage, :all
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @article }

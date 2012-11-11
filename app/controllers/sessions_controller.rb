@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    stophere = 0
   end
 
   def create
