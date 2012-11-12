@@ -24,5 +24,7 @@ Opinio.setup do |config|
   # Wether or not the default opinio controller should set the flash
   # when creating/removing comments
   config.set_flash = true
-
+  config.set_destroy_conditions( &Proc.new{ |comment|
+    can? :manage, :all
+  })
 end

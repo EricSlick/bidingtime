@@ -1,4 +1,7 @@
 class ArticlesController < AdminController
+
+  include Opinio::Controllers::Extensions::InstanceMethods
+
   # GET /articles
   # GET /articles.json
   def index
