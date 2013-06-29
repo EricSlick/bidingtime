@@ -1,21 +1,23 @@
 Bidingtime::Application.routes.draw do
 
 
+  root :to => 'welcome#index'
+
   opinio_model
 
   resources :users
 
   resources :sessions
-  match "/logout", :to => "sessions#logout", :as => :logout
-  match "/login", :to => "sessions#new", :as => :login
+  get "/logout", :to => "sessions#logout", :as => :logout
+  get "/login", :to => "sessions#new", :as => :login
 
-  match "/admin", :to => "admin#index", :as => :admin
-  match "/archives", :to => "welcome#archives", :as => :archives
+  get "/admin", :to => "admin#index", :as => :admin
+  get "/archives", :to => "welcome#archives", :as => :archives
 
   resources :articles do
   end
 
-  resources :welcomes do
+  resources :welcome do
     opinio
   end
 
@@ -69,9 +71,6 @@ Bidingtime::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

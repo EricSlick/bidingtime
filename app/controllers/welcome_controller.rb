@@ -50,6 +50,10 @@ class WelcomeController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   def archives
     @type = params[:archive]
     @articles = []
